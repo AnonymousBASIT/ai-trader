@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #08090c;
+  --color-surface: #101218;
+  --color-surface-2: #161a22;
+  --color-fg: #e6e4df;
+  --color-muted: #8a8f99;
+  --color-faint: #5c616b;
+  --color-border: #1e232c;
+  --color-accent: #c5d0d8;
+  --color-accent-fg: #08090c;
+  --color-up: #3ecf8e;
+  --color-down: #e85d5d;
+  --color-warn: #d4a054;
+  --color-cmd: #d4a054;
+
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --text-label: 0.625rem;
+  --text-data: 0.6875rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-hero: 2.25rem;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-border: 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-attachment: fixed;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.desk-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.desk-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+.desk-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes desk-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-up) 55%, transparent);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 5px transparent;
+  }
+}
+
+@keyframes flash-up {
+  0% {
+    background-color: color-mix(in oklab, var(--color-up) 32%, transparent);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes flash-down {
+  0% {
+    background-color: color-mix(in oklab, var(--color-down) 32%, transparent);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes tape-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.desk-enter {
+  animation: desk-enter 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.desk-enter-2 {
+  animation: desk-enter 400ms cubic-bezier(0.22, 1, 0.36, 1) 60ms both;
+}
+
+.desk-enter-3 {
+  animation: desk-enter 400ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+}
+
+.live-dot {
+  animation: pulse-live 1.8s ease-out infinite;
+}
+
+.flash-up {
+  animation: flash-up 480ms ease-out;
+  border-radius: 2px;
+}
+
+.flash-down {
+  animation: flash-down 480ms ease-out;
+  border-radius: 2px;
+}
+
+.tape-track {
+  animation: tape-scroll 42s linear infinite;
+}
+
+.radar-ring {
+  animation: radar-sweep 8s linear infinite;
+}
+
+.pressable {
+  transition:
+    transform 150ms ease-out,
+    background-color 150ms ease-out,
+    color 150ms ease-out;
+}
+.pressable:active {
+  transform: scale(0.96);
+}
+
+.depth-bar {
+  transition: width 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.heat-cell {
+  transition:
+    transform 150ms ease-out,
+    filter 150ms ease-out;
+}
+.heat-cell:hover,
+.heat-cell:focus-visible {
+  transform: scale(1.06);
+  z-index: 1;
+  filter: brightness(1.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .tape-track,
+  .radar-ring,
+  .live-dot {
+    animation: none !important;
+  }
+}

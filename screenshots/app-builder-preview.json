@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ATLAS",
+      "hasCanvas": false,
+      "bodyTextLen": 6045,
+      "bodyTextHash": "fc1a0cbc25e3e29cb1687e952aefb0e96ba1525cf8c1b6a29dc3ab7d2f7831a2",
+      "bodyTextPrefix": "ATLAS DESK Ticker / 10:07:27 UTC HUMA 0.020430 -25.7% FOGO 0.007",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ATLAS",
+      "hasCanvas": false,
+      "bodyTextLen": 2652,
+      "bodyTextHash": "095d6c741fb7d2a3bfcc25745a33c970420e0ecb7fceadd1334b15a278522b4f",
+      "bodyTextPrefix": "ATLAS Ticker / SIG 14 HUMA 0.020430 -25.7% FOGO 0.00757700 -16.2",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

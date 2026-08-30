@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ATLAS",
+      "hasCanvas": false,
+      "bodyTextLen": 1093,
+      "bodyTextHash": "270bffdad2384c9698137c481f3dc3ffea71f8f3c8961f94588edc177a618335",
+      "bodyTextPrefix": "ATLAS DESK Ticker / 07:29:29 UTC 1Overview 2Order flow 3Derivati",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [
+        "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch\n\n  ...\n    <Suspense fallback={null}>\n      <MatchImpl routeId=\"/\">\n        <MatchView router={{...}} match={{id:\"//\",ssr:true, ...}}>\n          <SafeFragment>\n            <SafeFragment fallback={null}>\n              <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n                <SafeFragment fallback={function fallback}>\n                  <MatchInnerImpl match={{id:\"//\",ssr:true, ...}}>\n                    <Lazy>\n                      <Home>\n                        <DeskApp>\n                          <div className=\"flex h-dvh...\">\n                            <header className=\"flex flex-...\">\n                              <div>\n                              <form>\n                              <div className=\"hidden font-mono text-data text-muted md:block\">\n+                               07:29:29 UTC\n-                               07:29:28 UTC\n                            ...\n"
+      ],
+      "screenshot": "/workspace/screenshots/atlas-dev.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ATLAS",
+      "hasCanvas": false,
+      "bodyTextLen": 1670,
+      "bodyTextHash": "d2645420f2e25a4030206688316b3b9747796a1ec113c8c39655227ab9aee405",
+      "bodyTextPrefix": "ATLAS Ticker / 1Overview 2Order flow 3Derivatives 4Predictions 5",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [
+        "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch\n\n  ...\n    <Suspense fallback={null}>\n      <MatchImpl routeId=\"/\">\n        <MatchView router={{...}} match={{id:\"//\",ssr:true, ...}}>\n          <SafeFragment>\n            <SafeFragment fallback={null}>\n              <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n                <SafeFragment fallback={function fallback}>\n                  <MatchInnerImpl match={{id:\"//\",ssr:true, ...}}>\n                    <Lazy>\n                      <Home>\n                        <DeskApp>\n                          <div className=\"flex h-dvh...\">\n                            <header className=\"flex flex-...\">\n                              <div>\n                              <form>\n                              <div className=\"hidden font-mono text-data text-muted md:block\">\n+                               07:29:31 UTC\n-                               07:29:30 UTC\n                            ...\n"
+      ],
+      "screenshot": "/workspace/screenshots/atlas-dev-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/atlas-dev.json"
+}
